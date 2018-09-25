@@ -41,7 +41,7 @@ namespace Exterminator.WebApi.ExceptionHandlerExtensions
                         ExceptionModel exceptionModel = new ExceptionModel{
                             StatusCode = statusCode,
                             ExceptionMessage = exception.Message,
-                            StackTrace = exception.StackTrace.ToString
+                            StackTrace = exception.StackTrace.ToString()
                         };
 
                         var logService = app.ApplicationServices.GetService(typeof(ILogService)) as ILogService;
@@ -50,8 +50,8 @@ namespace Exterminator.WebApi.ExceptionHandlerExtensions
                         await context.Response.WriteAsync(new ExceptionModel{
                             StatusCode = statusCode,
                             ExceptionMessage = exception.Message,
-                            StackTrace = exception.StackTrace.ToString
-                        }.ToString);
+                            StackTrace = exception.StackTrace.ToString()
+                        }.ToString());
 
                         
                     }

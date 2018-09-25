@@ -48,7 +48,7 @@ namespace Exterminator.WebApi
             }
 
             // TODO: Setup global exception handling
-
+            app.UseGlobalExceptionHandler();
             app.UseMvc();
         }
     }
